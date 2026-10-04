@@ -42,20 +42,35 @@ No external dependencies are required.
 
 ## 🚀 Usage
 
-Run the program:
+Run JSON Doctor from your terminal using the following arguments.
+
+**Basic validation**
 
 ```bash
-python main.py
+python main.py --file data.json
 ```
 
-Validate a JSON file:
+**Pretty-print JSON**
 
 ```bash
-python main.py data.json
+python main.py --file data.json --pretty
 ```
 
-> Note: Adjust the command examples to match the actual arguments implemented in `main.py`.
+### ⚙️ Arguments
 
+| Argument | Description |
+|---|---|
+| `-h`, `--help` | Display help information. |
+| `--file FILE` | Specify the JSON file to analyze. Required. |
+| `--pretty` | Enable pretty-printed JSON output. |
+
+### 💡 Example
+
+```bash
+python main.py --file config.json --pretty
+```
+
+This command reads `config.json`, checks its JSON syntax, and pretty-prints the content if valid.
 ## 📂 Project Structure
 
 ```text
