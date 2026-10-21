@@ -1,7 +1,7 @@
 import argparse
 import json
 from pathlib import Path
-
+import sys
 
 def resolve_file_path(input_path_str: str) -> Path | None:
     target = Path(input_path_str)
@@ -24,6 +24,12 @@ def resolve_file_path(input_path_str: str) -> Path | None:
 
     return None
 
+def setup_environment():
+    if sys.platform == "win32":
+        import colorama
+        colorama.init()
+
+setup_environment()
 
 parser = argparse.ArgumentParser(
     description="JSON Doctor - A tool to validate and format JSON data."
